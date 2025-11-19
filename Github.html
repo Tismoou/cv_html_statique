@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Mathis Benali</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* === Couleurs et typographie === */
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ccc;
+    }
+
+    /* === Navbar === */
+    .navbar {
+      padding: 1rem 2rem;
+    }
+
+    .nav-link {
+      margin-left: 1.5rem;
+      font-weight: 500;
+    }
+
+    /* === Hero === */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: #000;
+    }
+
+    #hero h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    #hero p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    #hero .btn {
+      border: 2px solid #fff;
+      color: #fff;
+      padding: 0.75rem 2rem;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    #hero .btn:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* === Sections === */
+    section {
+      padding: 6rem 0;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+      font-weight: 600;
+      position: relative;
+    }
+
+    section h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #fff;
+      margin: 0.5rem auto 0;
+    }
+
+    /* === Projets === */
+    .project-card {
+      background: #111;
+      border: 1px solid #333;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+    }
+
+    /* === Compétences === */
+    .skill-bar {
+      background: #111;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .skill-bar div {
+      height: 20px;
+      background: #fff;
+      width: 0;
+      transition: width 1s;
+    }
+
+    /* === Footer === */
+    footer {
+      background: #111;
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-black">
+    <div class="container">
+      <a class="navbar-brand" href="#">Mathis Benali</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#hero">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Profil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <h1>Mathis Benali</h1>
+    <p>Développeur passionné | Portfolio professionnel</p>
+    <a href="#projects" class="btn">Voir mes projets</a>
+  </section>
+
+  <!-- About / Profil -->
+  <section id="about">
+    <div class="container">
+      <h2>Profil</h2>
+      <p class="text-center">Déterminé, sérieux et autonome. Passionné par le football depuis l'âge de 7 ans et amateur de jeux vidéo. Je développe mes compétences en informatique et gestion de données, et je cherche à créer des projets utiles et élégants.</p>
+    </div>
+  </section>
+
+  <!-- Projets -->
+  <section id="projects" class="bg-black">
+    <div class="container">
+      <h2>Projets</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="project-card p-3">
+            <h5>Projet 1</h5>
+            <p>Application de gestion de données SQL et C#.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="project-card p-3">
+            <h5>Projet 2</h5>
+            <p>Automatisation Excel avec macros et formules avancées.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="project-card p-3">
+            <h5>Projet 3</h5>
+            <p>Création de rapports Crystal Reports pour bases de données.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compétences -->
+  <section id="skills">
+    <div class="container">
+      <h2>Compétences</h2>
+      <div class="mb-3">
+        <p>SQL</p>
+        <div class="skill-bar"><div style="width:80%"></div></div>
+      </div>
+      <div class="mb-3">
+        <p>C#</p>
+        <div class="skill-bar"><div style="width:70%"></div></div>
+      </div>
+      <div class="mb-3">
+        <p>Excel / Macros</p>
+        <div class="skill-bar"><div style="width:85%"></div></div>
+      </div>
+      <div class="mb-3">
+        <p>Crystal Reports</p>
+        <div class="skill-bar"><div style="width:60%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formation / Expériences -->
+  <section id="experience" class="bg-black">
+    <div class="container">
+      <h2>Formation & Expériences</h2>
+      <ul>
+        <li>2025 (prévu) : BTS SIO, option SLAM</li>
+        <li>2025 (prévu) : Formation au CFAI – Développement informatique</li>
+        <li>2024 : Stage à la STAS — Analyse Excel, macros et automatisation</li>
+        <li>2023 : Stage à E-Metrix & STAS — SQL, C#, Excel</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Centres d’intérêt -->
+  <section id="interests">
+    <div class="container">
+      <h2>Centres d’intérêt</h2>
+      <p class="text-center">Football depuis l’âge de 7 ans, jeux vidéo, développement informatique.</p>
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <footer id="contact">
+    <div class="container">
+      <p>© 2025 Mathis Benali | Portfolio</p>
+      <p>
+        <a href="https://www.linkedin.com/in/mathis-benali-5252362a7/">LinkedIn</a> | 
+        <a href="#"></a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Animation des barres de compétences au scroll
+    window.addEventListener('scroll', () => {
+      const skillBars = document.querySelectorAll('.skill-bar div');
+      skillBars.forEach(bar => {
+        const barTop = bar.getBoundingClientRect().top;
+        if(barTop < window.innerHeight) {
+          bar.style.width = bar.getAttribute('style');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
